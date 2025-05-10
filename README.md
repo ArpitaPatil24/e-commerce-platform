@@ -25,11 +25,7 @@ A full-stack mini e-commerce platform built with React (frontend), Node.js/Expre
 
 3. Create a `.env` file and configure your database connection:
    ```
-   DB_HOST=localhost
-   DB_USER=your_postgres_username
-   DB_PASSWORD=your_postgres_password
-   DB_NAME=ecommerce_db
-   DB_PORT=5432
+   DATABASE_URL=<your-postgre-database-link>
    ```
 
 4. Start the backend server:
