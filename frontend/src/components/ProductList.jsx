@@ -9,7 +9,7 @@ const ProductList = ({ searchTerm }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('/api/products');
+        const response = await axios.get('https://e-commerce-platform-a97v.onrender.com/api/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -20,7 +20,7 @@ const ProductList = ({ searchTerm }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/products/${id}`);
+      await axios.delete(`https://e-commerce-platform-a97v.onrender.com/api/products/${id}`);
       alert('Product deleted!');
       window.location.reload(); // Refresh
     } catch (error) {
@@ -49,7 +49,7 @@ const ProductList = ({ searchTerm }) => {
           className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow"
         >
           <img
-            src={`http://localhost:5000/uploads/${product.image}`}
+            src={`https://e-commerce-platform-a97v.onrender.com/uploads/${product.image}`}
             alt={product.name}
             className="w-full h-48 object-cover"
           />
